@@ -57,7 +57,7 @@ document.getElementById('btnRegister').addEventListener('click', () => {
     }
     localStorage.setItem('loggedInUser', login);
     users[regLogin] = regPassword;
-    window.location.href = "index.html";
+    window.location.href = "chats.html";
 });
 
 
@@ -72,7 +72,7 @@ document.getElementById('btnSignIn').addEventListener('click', () => {
 
     if (users[login] && users[login] === password) {
         localStorage.setItem('loggedInUser', login);
-        window.location.href = "index.html";
+        window.location.href = "chats.html";
     } else {
         alert("Неверный логин или пароль.");
     }

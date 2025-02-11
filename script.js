@@ -78,5 +78,5 @@ document.getElementById('btnSignIn').addEventListener('click', () => {
     }
 });
 
-document.getElementById('Profile').textContent = users[0];
+//document.getElementById('Profile').textContent = users[0];
 

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крепышь мессенджер</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h2 id="theme" class="brandName">Krepish Messenger</h2> 
+            <p>Pa1nG and ALteregx</p>
+        </div>
+        <p id="Profile" class="sign">Профиль</p> 
+    </header>
+
+    <main>
+        <div class="chatMenu">
+            <button data-chat="chat1">Новости</button>
+            <button data-chat="chat2">Сообщения</button>
+        </div>
+        
+        <div class="chatList">
+            <h3>Чаты</h3>
+            <div class="chatItem" data-chat="chat1">
+                <img class="avatar" src="https://i.ibb.co/whJBydd1/photo-2025-02-11-22-58-30.jpg" alt="Avatar">
+                <div class="chatInfo">
+                    <p class="nick">Самсон Вырин</p>
+                    <p class="messagePreview">Вы: Привет!</p>
+                </div>
+            </div>
+            <div class="chatItem" data-chat="chat2">
+                <img class="avatar" src="https://sun9-57.userapi.com/impg/bKwxsgcU6bG1xfibm0gUpS_cISmvRt703t2zUg/_z41aS21Bs8.jpg?size=537x537&quality=96&sign=0aedf23491c91849ec77a271a761fb6f&type=album" alt="Avatar">
+                <div class="chatInfo">
+                    <p class="nick">Крепыш Главный</p>
+                    <p class="messagePreview">Капец ты тип</p>
+                </div>
+            </div>
+            <div class="chatItem" data-chat="chat3">
+                <img class="avatar" src="https://i.pinimg.com/236x/50/c1/52/50c1528df77b307d7b9db0fa8e0de37b.jpg" alt="Avatar">
+                <div class="chatInfo">
+                    <p class="nick">Даниил Гареев</p>
+                    <p class="messagePreview">Пошел нахуй!</p>
+                </div>
+            </div>
+            <div class="chatItem" data-chat="chat4">
+                <img class="avatar" src="https://upload.wikimedia.org/wikipedia/ru/thumb/9/94/%D0%93%D0%B8%D0%B3%D0%B0%D1%87%D0%B0%D0%B4.jpg/250px-%D0%93%D0%B8%D0%B3%D0%B0%D1%87%D0%B0%D0%B4.jpg" alt="https://avatars.mds.yandex.net/i?id=2a00000194dbef7a8d40826c958378ee3127-1380813-fast-images&n=13" alt="Avatar">
+                <div class="chatInfo">
+                    <p class="nick">Самсон Буранов</p>
+                    <p class="messagePreview">Го в зал в пятницу</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chatWindow" id="chat1Window">
+            <div class="chatHeader">
+                <img class="avatar" src="https://i.ibb.co/whJBydd1/photo-2025-02-11-22-58-30.jpg" alt="Avatar">
+                <p class="nick">Самсон Вырин</p>
+            </div>
+            <div class="messages"></div>
+            <div class="messageInput">
+                <input type="text" placeholder="Введите сообщение">
+                <button>Отправить</button>
+            </div>
+        </div>
+        <div class="chatWindow" id="chat2Window">
+            <div class="chatHeader">
+                <img class="avatar" src="https://sun9-57.userapi.com/impg/bKwxsgcU6bG1xfibm0gUpS_cISmvRt703t2zUg/_z41aS21Bs8.jpg?size=537x537&quality=96&sign=0aedf23491c91849ec77a271a761fb6f&type=album" alt="Avatar">
+                <p class="nick">Крепыш Главный</p>
+            </div>
+            <div class="messages"></div>
+            <div class="messageInput">
+                <input type="text" placeholder="Введите сообщение">
+                <button>Отправить</button>
+            </div>
+        </div>
+        <div class="chatWindow" id="chat3Window">
+            <div class="chatHeader">
+                <img class="avatar" src="https://i.pinimg.com/236x/50/c1/52/50c1528df77b307d7b9db0fa8e0de37b.jpg" alt="Avatar">
+                <p class="nick">Даниил Гареев</p>
+            </div>
+            <div class="messages"></div>
+            <div class="messageInput">
+                <input type="text" placeholder="Введите сообщение">
+                <button>Отправить</button>
+            </div>
+        </div>
+        <div class="chatWindow" id="chat4Window">
+            <div class="chatHeader">
+                <img class="avatar" src="https://upload.wikimedia.org/wikipedia/ru/thumb/9/94/%D0%93%D0%B8%D0%B3%D0%B0%D1%87%D0%B0%D0%B4.jpg/250px-%D0%93%D0%B8%D0%B3%D0%B0%D1%87%D0%B0%D0%B4.jpg" alt="Avatar">
+                <p class="nick">Самсон Буранов</p>
+            </div>
+            <div class="messages"></div>
+            <div class="messageInput">
+                <input type="text" placeholder="Введите сообщение">
+                <button>Отправить</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="popup" class="popup">
+        <p>Sign in</p>
+        <input type="text" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+        <p>Нет аккаунта? <a href="https://www.youtube.com/login">Регистрация</a></p>
+        <div class="popupButtons">
+            <button id="btn">Sign in</button>
+            <button id="close">Cancel</button>  
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

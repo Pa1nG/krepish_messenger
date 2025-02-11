@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крепышь Мессенджер</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Ruda', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f7fc;
+        }
+
+        header {
+            background: #4e6c9d;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 900;
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        main {
+            display: flex;
+            padding: 20px;
+        }
+
+        .intro, .features {
+            margin-bottom: 40px;
+        }
+
+        .intro h2, .features h2 {
+            font-size: 1.8em;
+            color: #4e6c9d;
+        }
+
+        .intro p, .features ul {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .features ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .features li {
+            margin: 10px 0;
+        }
+
+        .download {
+            text-align: center;
+        }
+
+        .downloadBtn {
+            background-color: #6c8fc7;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .downloadBtn:hover {
+            background-color: #5b7c9b;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background: #4e6c9d;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
+        }
+        body {
+            font-family: 'Ruda', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f7fc;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #4e6c9d;
+            color: white;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .intro h2, .features h2 {
+                font-size: 1.6em;
+            }
+
+            .intro p, .features ul {
+                font-size: 1em;
+            }
+
+            .downloadBtn {
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Krepish Messenger</h1>
+        <div class="buttons">
+            <button id="openPopup" class="sign">Вход</button>
+            <button id="openRegister" class="login">Регистрация</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Что такое Krepish Messenger?</h2>
+            <p>
+                Krepish Messenger — это инновационный мессенджер, который объединяет в себе все необходимые
+                функции для быстрого и удобного общения. Независимо от того, общаетесь ли вы с друзьями, коллегами
+                или по вопросам бизнеса, мы обеспечим вам безопасность и удобство. Мы предоставляем пользователям
+                возможность обмена сообщениями, голосовыми и видеозвонками, обмена файлами, а также защиту данных
+                с помощью современных технологий шифрования.
+            </p>
+        </section>
+    </main>
+    <div id="popup" class="popup">
+        <p>Sign in</p>
+        <input type="text" id="login" name="email" placeholder="Login">
+        <input type="password" id="password" name="password" placeholder="Password">
+        <div class="popupButtons">
+            <button id="btnSignIn">Sign in</button>
+            <button id="close">Cancel</button>  
+        </div>
+    </div>
+
+    <div id="reg" class="reg">
+        <p>Register</p>
+        <input type="text" id="regLogin" name="email" placeholder="Login">
+        <input type="password" id="regPassword" name="password" placeholder="Password">
+        <div class="popupButtons">
+            <button id="btnRegister">Register</button>
+            <button id="close1">Cancel</button>  
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Krepish Messenger. Все права защищены.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
